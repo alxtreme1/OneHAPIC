@@ -1,0 +1,95 @@
+:root {
+  --largura-tecla-branca: 50px;
+  --largura-tecla-preta: 30px;
+  --altura-piano: 208px;
+  --tamanho-pista: 400px;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #555;
+  /* height: 100vh; */
+  /* overflow: hidden; */
+}
+.piano{
+  display: flex;
+  margin: 0 auto;
+  /* align-content: center;
+  vertical-align: bottom;
+  align-items: bottom;
+  height: 100%;
+  border: 1px solid black; */
+  overflow: hidden;
+  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.tecla-branca{
+  background-color: #fff;
+  border: 1px solid #000;
+  height: 208px;
+  width: var(--largura-tecla-branca);
+  display: inline-block;
+}
+.tecla-preta{
+  position: absolute;
+  background-color: #000;
+  height: 128px;
+  width: var(--largura-tecla-preta);
+}
+.oitava{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+[cs]{
+  left: 35px;
+}
+[ds]{
+  left: 85px;
+}
+[fs]{
+  left: 185px;
+}
+[gs]{
+  left: 235px;
+}
+[as]{
+  left: 285px;
+}
+.selecionada{
+/*   box-shadow: 1px solid black; */
+  background-color: #F0E68C;
+}
+.pista {
+  background-color: rgba(0, 0, 0, 0.505);
+  /* width: 100%; */
+  height: var(--tamanho-pista);
+  position: absolute;
+  z-index: -1;
+  animation-name: play;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  bottom: var(--altura-piano);
+  /* overflow: hidden; */
+}
+.nota {
+  background-color: rgb(59, 205, 81);
+  border-radius: 4px;
+  position: absolute;
+}
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+/* The animation code */
+@keyframes play {
+  to {bottom: calc(-1 * var(--tamanho-pista))};
+}
