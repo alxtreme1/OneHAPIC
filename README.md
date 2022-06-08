@@ -3,4 +3,4 @@ Learn piano notes for each hand with a piano keyboard. You can also create notes
 
 ![image](https://user-images.githubusercontent.com/29804266/172404288-96251c84-ca4d-4d85-a21a-c334eea56fc1.png)
 
-We use the [WebAudioFont API](https://github.com/surikov/webaudiofont) to play piano key songs in HTMLs pages.
+We use the [WebAudioFont API](https://github.com/surikov/webaudiofont) to play piano key sounds in HTMLs pages.
