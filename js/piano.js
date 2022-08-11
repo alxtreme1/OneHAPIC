@@ -2,11 +2,13 @@ const teclas = document.querySelectorAll(".oitava > div");
 const dictTeclas = {'c':0, 'cs':1, 'd':2, 'ds':3, 'e':4, 'f':5, 'fs':6, 'g':7, 'gs':8, 'a':9, 'as':10, 'b':11};
 let teclasTocando = [];
 
-// if(deviceIsMobile){
-//   openFullScreen();
-// }
 let AudioContextFunc = window.AudioContext || window.webkitAudioContext;
 let audioContext = new AudioContextFunc();
+
+// opening fullscreen on mobile devices automatic
+if(deviceIsMobile){
+  openFullScreen();
+}
 
 function tocar(tecla){
 	let player = new WebAudioFontPlayer();
