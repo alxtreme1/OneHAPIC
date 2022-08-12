@@ -6,8 +6,8 @@ let AudioContextFunc = window.AudioContext || window.webkitAudioContext;
 let audioContext = new AudioContextFunc();
 
 // opening fullscreen on mobile devices automatic
-if(deviceIsMobile){
-  openFullScreen();
+if(deviceIsMobile()){
+    openFullscreen();
 }
 
 function tocar(tecla){
